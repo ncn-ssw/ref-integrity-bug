@@ -36,6 +36,18 @@ const Post: Collection = {
       collections: ["author"],
     },
     {
+      type: "object",
+      name: "subAuthorRefs",
+      label: "Sub-Author References",
+      list: true,
+      fields: [{
+        type: "reference",
+        label: "Author",
+        name: "author",
+        collections: ["author"],
+      }],
+    },
+    {
       type: "datetime",
       label: "Posted Date",
       name: "date",
